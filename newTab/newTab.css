@@ -1,0 +1,190 @@
+body{
+    background: linear-gradient(to right, #000046, #1CB5E0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bg-manual {
+    background: linear-gradient(to right, #000046, #1CB5E0);
+}
+.navbar-brand {
+    color: cornsilk !important;
+}
+.load{
+    width: 8rem;
+    height: 8rem;
+}
+.newTabHeading{
+    margin:80px auto 30px;
+}
+.main-heading{
+    margin:0;
+    color: cornsilk;
+}
+#name {
+    padding: 0 5px;
+    background: linear-gradient(to right, #000046, #1CB5E0);
+    border: none;
+    border-radius: 5px;
+}
+.search-form {
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
+.search-form input{
+    display: block;
+    margin: 10px auto;
+    background: linear-gradient(to right, #1CB5E0, #000046);
+    border: none;
+    border-radius: 5px;
+}
+.search-form input[type = text] {
+    width: 90%;
+    padding: 5px 10px;
+    color: rgb(180, 180, 179);
+}
+.search-form input[type = submit] {
+    width: 30%;
+    padding: 5px;
+    background: linear-gradient(to right, #1CB5E0, #000046);
+    color: burlywood;
+}
+
+.search-form input[type = text]:hover {
+    background: linear-gradient(to right, #000046, #1CB5E0);
+    color: cornsilk;
+    transition-duration: 1000ms;
+}
+
+.search-form input[type = submit]:hover {
+    background: linear-gradient(to right, #000046, #1CB5E0);
+    color: rgb(0, 255, 242);    
+    transition-duration: 1000ms;
+}
+
+.card{
+    width: 60%;
+    margin: 10px auto;
+    border: 8px ridge rgb(124, 189, 255);
+}
+.card-body {
+    background-color: darkslategrey;
+}
+
+.card-text a {
+    text-decoration: none;
+}
+.fac-intro {
+    margin-bottom: 10px;
+}
+.fact-detail{
+    font-size: 12.5px;
+    margin-bottom: 0px;
+}
+.date-time-wrapper {
+    width: 80%;
+    margin: 50px auto 0;
+    border: 5px ridge rgb(0, 238, 255);
+    border-radius: 0.3rem;
+    padding: 10px;
+    background: linear-gradient(to right, #0fcbff, #01012c);
+}
+.time-string {
+    color: blanchedalmond;
+}
+.date-string {
+    color: blanchedalmond;
+}
+.stick-down {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+}
+.BMwrapper {
+    width: 90%;
+    margin: 5px auto;
+    position: relative;
+}
+#close-BMform {
+    position: absolute;
+    top: 0;
+    right: 20%;
+    cursor: pointer;
+    display: none;
+    
+}
+.add {
+    display: none;
+    
+}
+.add input {
+    width: 50%;
+    margin-bottom: 5px !important;
+    padding: 5px 10px;
+    border: none;
+}
+#bookmark {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    color: cornsilk;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #0fcbff, #01012c);
+}
+#msg {
+    color: burlywood;
+    opacity: 1;
+    display: none;
+    transition-duration: 2000ms;
+}
+#BMcount {
+    background: #31f500;
+    padding: 0px 5px;
+    border-radius: 2px;
+    font-weight: 600;
+}
+.dropdown-item {
+    border-radius: 5px;
+}
+.delete {
+    padding: 4px 16px;
+    cursor: pointer;
+}
+
+/* media queries */
+@media only screen and (max-width: 600px) {
+    .search-form input[type = text]:hover {
+        background-color: rgb(255, 255, 255);
+        transition-duration: 1000ms;
+    }
+    .search-form input[type = submit] {
+        width: 40%;
+        padding: 2px;
+    }
+    .add input[type = text] {
+        width: 70%;
+    }
+    #close-BMform {
+        right: 5%;
+    }
+}
+
+@media only screen and (max-width: 298px) {
+    .newTabHeading{
+        margin:120px auto 30px;
+    }
+    .search-form input[type = text] {
+        width: 100%;
+        padding: 2px;
+    }
+    .search-form input[type = submit] {
+        width: 60px;
+        padding: 2px;
+    }
+    .add input[type = text] {
+        width: 80%;
+    }
+    #close-BMform {
+        right: 0;
+    }
+}

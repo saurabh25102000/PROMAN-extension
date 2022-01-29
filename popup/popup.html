@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Comfortaa&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css"> -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body class="border-gradient border-gradient-purple">
+    <h1 class="welcome">Welcome to PROMAN chrome extension</h1>
+    <p id="elapsedTime" class="heading"><!--browsing time--></p>
+      <button class="feature-btn"><i class="fas fa-tools"></i></button>
+      <ul class="features-list display-features">
+        <li>Set your work duration and take break after some time.</li>
+        <li>Set alarms at specified date & time and get notified at the scheduled time.</li>
+        <li>Blacklist disturbing sites or site patterns and focus on important.</li>
+        <li>Make todos list for a scheduled start and end time and get notified when scheduled time is reached.</li>
+        <li> <i class="note">Note: all sites will be blocked as break time reached.</i></li>
+      </ul>
+     
+
+    <h3 class="heading"><i class="fas fa-lock feature-btn"></i> Blacklist sites</h3>
+    <h3 class="heading"><i class="fas fa-tasks feature-btn"></i> Make tasks list</h3>
+    <p>Go to extension's option page</p>
+    <button class="btn" id="go-to-options">Go to options</button>
+    <!-- settings for sound-->
+    <h3 class="heading"><i class="fas fa-cogs feature-btn"></i> Settings</h3>
+    <span class="setting_title">Break Alert Sound <i class="far fa-arrow-alt-circle-right"></i></span>
+    <label class="switch">
+      <input type="checkbox" id="break-alert">
+      <span class="slider"></span>
+    </label>
+    <br><br>
+    <span class="setting_title">Alarm Alert Sound <i class="far fa-arrow-alt-circle-right"></i></span>
+    <label class="switch">
+      <input type="checkbox" id="alarm-alert">
+      <span class="slider"></span>
+    </label>
+    <br><br>
+    <span class="setting_title">Todo Alert Sound <i class="far fa-arrow-alt-circle-right"></i></span>
+    <label class="switch">
+      <input type="checkbox" id="todo-alert">
+      <span class="slider"></span>
+    </label>
+
+    <hr class="horiline">
+    <!-- break time and duration -->
+    <h3 class="heading"><i class="fas fa-street-view feature-btn"></i> Set duration(minutes) from now to take some break</h3>
+    <form action="" class="break-form" id="bdf">
+      <label for="duration">Duration: </label>
+      <input type="number" name="duration" id="duration" min="1" placeholder="greater than or equal to 1 minute">
+
+      <input class="btn" type="submit" name="setBreak" id="setBreak" value="set">
+    </form>
+    <!-- break duration -->
+    <div class="break-time">
+      <!--alarm time-->
+    </div>
+
+    <hr class="horiline">
+    <!-- alarm -->
+    <h3 class="heading"><i class="far fa-clock feature-btn"></i> Set an alarm</h3>
+    <form action="" class="alarm-form">
+      <label for="name">Alarm Name: </label>
+      <input type="text" name="name" id="name" placeholder="study philosophy">
+      <label for="scheduledTime">Date & Time: </label>
+      <input type="datetime-local" name="scheduledTime" id="scheduledTime">
+      <label for="period">Repetition period: </label>
+      <input type="number" min="1" name="period" id="period" placeholder="in minutes">
+   
+      <input class="btn" type="submit" name="set" id="set" value="set">
+      <input class="btn" type="reset" name="reseet" id="reseet" value="reset">
+    </form>
+    <br>
+    <div class="alarm-time">
+      <!--alarm time-->
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

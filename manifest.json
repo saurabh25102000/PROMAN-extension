@@ -1,0 +1,92 @@
+{
+  "name": "PROMAN extension",
+  "description": "Set timer for your task, blacklist browser/urls during break, Set alarm and make Todos for your tasks, overall resulting in your productivity....",
+  "version": "0.0.1",
+  "manifest_version": 2,
+
+  "background": {
+    "scripts": ["/scripts/background/background.js"]
+    //default persistence is true
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*/*","http://*/*"] ,
+      "css": ["/css/all.min.css"],
+      "js": ["/scripts/content/jquery-3.6.0.js","/scripts/content/content-script.js"]
+    }
+  ],
+
+  // chromepage overrides can override "newtab","bookmarks","history"
+  "chrome_url_overrides" : {
+    "newtab": "/newTab/newTab.html"
+  },
+
+  "permissions": ["storage","unlimitedStorage","tabs","notifications","alarms", "activeTab","webRequest","webRequestBlocking","*://*/*"],
+
+  "browser_action": {
+    "default_popup": "/popup/popup.html",
+    "default_icon": {
+      "16": "/images/time-to-market16.png",
+      "24": "/images/time-to-market24.png",
+      "32": "/images/time-to-market32.png",
+      "64": "/images/time-to-market64.png",
+      "128": "/images/time-to-market128.png"
+    }
+  },
+
+  "icons": {
+    "16": "/images/time-to-market16.png",
+    "24": "/images/time-to-market24.png",
+    "32": "/images/time-to-market32.png",
+    "64": "/images/time-to-market64.png",
+    "128": "/images/time-to-market128.png"
+  },
+
+  //embedded options page
+  "options_ui": {
+      "page": "/options/options.html",
+      "open_in_tab": true
+  },
+  
+  "web_accessible_resources": [
+    //html pages
+      "/options/options.html" ,
+    //stylesheets
+      "/options/options.css" ,
+      "/css/all.min.css" , 
+    //js 
+      "/options/options.js" ,
+    //webfonts
+      "webfonts/*"
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>

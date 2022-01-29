@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css"> -->
+
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="/bootstrap-5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="options.css">
+    <title>PROMAN extension option page</title>
+  </head>
+  <body>
+    <div class="whole-wrapper border-gradient border-gradient-purple">
+        <!-- menu -->
+        <div id="menu">
+          <table>
+            <tr>
+              <th><a href="#taskslist">Tasks list</a></th>
+              <th><a href="#blacklisting">Blacklist sites</a></th>
+            </tr>
+          </table>
+        </div>
+        <!-- task todo list starts here -->
+        <div class="container todo_container">
+          <header class="text-center text-light my-4">
+            <h1 class="mb-4">PROMAN options page</h1>
+              <h4 id="taskslist" class="mb-4">Task List</h4>
+              <form class="search">
+                  <input class="form-control m-auto" type="text" name="search" placeholder="search tasks">
+              </form>
+              <div class="taskscount">
+                <span class="badge bg-danger">to-do: 0</span> <span class="badge bg-warning">ongoing: 0</span> <span class="badge bg-primary">done: 0</span>
+              </div>
+          </header>
+
+          <ul class="list-group mx-auto todos text-light">
+
+          </ul>
+
+          
+          <form action="" class="add"  autocomplete="off">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" name="add" id="floatingInput" placeholder="Task Description">
+              <label for="floatingInput">Task Description</label>
+            </div>
+
+            <div class="row g-2 mb-3">
+              <div class="col-md">
+                <div class="form-floating">
+                  <input type="datetime-local" class="form-control" name="startdate" id="floatingInputGrid" placeholder="dd-mm-yyyy HH:MM">
+                  <label for="floatingInputGrid">Task Starting Date</label>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-floating">
+                  <input type="datetime-local" class="form-control" name="enddate" id="floatingInputGrid" placeholder="dd-mm-yyyy HH:MM">
+                  <label for="floatingInputGrid">Task Ending Date</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-1">
+              <div class="col-md">
+                <div class="form-floating">
+                  <input type="submit" class="form-control" name="submit" id="addTodo" value="Add Task">
+                </div>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+        <!-- task todo list ends here -->
+        <hr class="horiline">
+    
+        <div class="container site-blocker-container"> 
+          <h4 id="blacklisting">Blacklist time wasting sites and concentrate on your task</h4>
+          <span class="badge bg-danger" id="blockGenUrlsCount"><!--blocked sites count--></span>
+          <!-- general urls blocker form-->
+          <form  action="" id="gen-blocker-form">
+            <div class="mb-3">
+              <label for="exampleInputText1" class="form-label text-info">Paste the url you want to block</label>
+              <input type="text" class="form-control" aria-describedby="textHelp" name="genUrl" placeholder="Please do not enter duplicate url" value="">
+            </div>
+            <div class="mb-3">
+              <input class="btn btn-danger custom_submit_button" type="submit" value="block">
+            </div>
+          </form>
+
+          <!-- general urls blocked list -->
+          <div id="gen-blocked-container">
+            <h5>Block List</h5>
+            <ul class="list-group mx-auto text-light" id="gen-block-list">
+              <!-- blocked sites are listed here -->
+              
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="container credits">
+          <h5><i class="fas fa-handshake credit-btn"></i> credits are given below</h5>
+          <div><i class="far fa-arrow-alt-circle-right"></i> <small><a href="https://www.flaticon.com/free-icons/productivity" title="productivity icons">Productivity icons created by Freepik - Flaticon</a></small></div>
+          <div><i class="far fa-arrow-alt-circle-right"></i> <small>Alarm notification icon made by <a href="" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></small></div>
+          <div><i class="far fa-arrow-alt-circle-right"></i> <small>Todo notification icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></small></div>
+        </div>
+
+    </div>
+        <br><br><br> <hr>
+        <a id="btp" href="#menu"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- testing starts from here -->
+    <!-- <div style="margin-bottom: 100px"></div> -->
+    <!-- testing ends here -->
+
+    <!-- js included here -->
+    <script src="/bootstrap-5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

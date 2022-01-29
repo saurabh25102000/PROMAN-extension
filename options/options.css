@@ -1,0 +1,235 @@
+body {
+    font-family: 'Source Serif Pro', serif;
+    color: rgb(242, 255, 242);
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;/* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.whole-wrapper {
+    width: 70%;
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 10px solid rgb(0, 0, 0);
+    margin: 20px auto 0;
+    border-top:100px solid rgb(0, 0, 0) ;
+    border-bottom:100px solid rgb(0, 0, 0) ;
+}
+
+.border-gradient {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 15px;
+}
+.border-gradient-purple {
+    border-image-source: linear-gradient(to right, #240b36,  #c31432,#240b36);
+}
+
+#menu {
+    width: 100%;
+    margin: 0 auto 10px;
+    transition: width 1s;
+}
+#menu table {
+    width: 100%;
+    text-align: center;
+}
+#menu table th {
+    padding: 0;
+    width: 50%;
+    border: 0px ridge rgb(56, 56, 56);
+    background: linear-gradient(to right, #240b36, #c31432);
+    cursor: pointer;
+    transition-duration: 500ms;
+    box-sizing: border-box;
+}
+#menu table th a {
+    display: inline-block;
+    color: linen;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition-duration: 500ms;
+}
+
+#menu table th:hover {
+    background: rgb(255, 255, 255);
+    box-shadow: inset rgb(0, 0, 0) 0px 0px 50px;
+}
+
+#menu table th a:hover {
+    color: rgb(0, 28, 119);
+}
+
+
+.site-blocker-container {
+    width: 90%;
+    transition: width 1s;
+}
+#gen-blocked-container, #pattern-blocked-container {
+    margin-bottom: 20px;
+    font-size: small;
+}
+
+#site {
+    word-break:break-all;
+    margin-right: 20px;
+}
+
+.delete {
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* tasks todo style starts here */
+.todo-label {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: large;
+}
+input[type=text],
+input[type=datetime-local]{
+    color: #fff;
+    border: none;
+    background: #C04848;
+    background: -webkit-linear-gradient(to right, #480048, #C04848);
+    background: linear-gradient(to right, #480048, #C04848); 
+}
+
+input[type=text]:focus,
+input[type=datetime-local]:focus{
+    background: #362f2f; 
+    color: rgb(255, 255, 255);
+    box-shadow: inset floralwhite 0 0 8px;
+    font-weight: 600;
+}
+
+.custom_submit_button {
+    background: #8A2387;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387); 
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    border: none;
+}
+
+.custom_submit_button:hover{
+    background: #fff;
+    color: rgb(255, 0, 0);
+    border: none;
+    transition-duration: 500ms;
+}
+
+#addTodo {
+    background: #8A2387;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387); 
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    border: none;
+    padding-top: 0.625rem;
+    height: 38px;
+    transition:background .5s,color .5s;
+}
+#addTodo:hover {
+    color: rgb(7, 61, 0);
+    background: #fff;
+}
+input:hover,input:focus {
+    background: #362f2f;
+    transition:background 500ms, box-shadow 500ms;
+    box-shadow: inset floralwhite 0 0 8px;
+}
+
+.todo_container {
+    width: 90%;
+    transition: width 1s;
+}
+.todos li{
+    background:linear-gradient(to left top, rgb(0, 122, 116) ,rgb(0, 218, 199));
+}
+#gen-block-list li,
+#pattern-block-list li{
+    /* background-color: #446f3a; */
+    background: #C04848;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right bottom, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right bottom, #480048, #C04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    word-break:break-all;
+    border: none;
+}
+.filtered{
+    display: none !important;
+}
+
+#blockGenUrlsCount,
+#blockPatternsCount{
+    margin: 0;
+}
+
+.horiline {
+    border: none;
+    border-top: 5px #ccc solid;
+    width: 90%;
+    margin: 10px auto;
+}
+.add {
+    margin-top: 20px;
+}
+
+.credits {
+    width: 90%;
+    margin: auto;
+    color: linen;
+}
+
+.credits > div > small > a {
+    text-decoration: dashed;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.credit-btn {
+    background: #8A2387;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387); 
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+#btp {
+    position: sticky;
+    bottom: 10px;
+    left: 90%;
+    padding: 10px 15px;
+    color: antiquewhite;
+    background: linear-gradient(to right bottom, chocolate, rgb(148, 73, 19));
+    border: none;
+    border-radius: 50%;
+    transition-duration: 1000ms;
+}
+
+#btp:hover {
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    border: 1px solid #000;
+}
+
+@media only screen and (max-width: 1000px) {
+    .whole-wrapper {
+        width: 85%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .whole-wrapper {
+        width: 100%;
+    }
+  }
