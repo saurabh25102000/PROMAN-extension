@@ -32,6 +32,7 @@ Basically this is a chrome extension development project. The main purpose of th
 **Basic tech stacks required for this project are mainly `HTML`, `CSS`, `Javascript` and most important part of the project is `chrome APIs` which can be found in [chrome developer documenation](https://developer.chrome.com/docs/extensions/).**
 
 ## Work
+#### Demo of the project [video](https://youtu.be/RC71mnnb1nk).
 All required features are successfully implemented with some beautiful UI using cascading styles and in addition to the required features, **some extra work** has also been done as described below....
 
 - The extension also *overrides the default chrome search new tab* having classy look and have following features..
